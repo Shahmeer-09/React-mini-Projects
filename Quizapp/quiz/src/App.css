@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Lobster&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+section{
+    height: 100vh;
+    
+    display: flex;
+}
+.main{
+  width: 75%;
+  background-image: url("./assets/quizbg.jpg");
+  background-position: center;
+  background-size: cover;
+  /* filter:grayscale(90%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.timer{
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.timer .time{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 10px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}
+.quiz{
+  height: 50%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.quiz h1{
+  color: white;
+  
+  background-color: #da6290;
+  border: 1px solid white;
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+.quiz .options{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.options div{
+background-color: #d23873;
+color: white;
+padding: 10px 15px;
+width: 200px;
+margin: 10px;
+border: 1px solid white;
+border-radius: 10px;
+cursor: pointer;
+}
+.options .op:hover{
+   background-color: #850f3c;
+}
+.options .op.active{
+  background-color: #850f3c;
+}
+.op.correct{
+  
+  animation: correct 3s ease forwards;
+}
+.op.wrong{
+
+  animation: wrong 3s ease forwards;
+}
+@keyframes correct {
+   0%,
+   22%,
+   42%{
+    background-color: #850f3c;
+   }
+   20%,
+   40%{
+    background-color: #d23873;
+   }
+   100%{
+    background-color: green;
+   }
+}
+@keyframes wrong {
+   0%,
+   22%,
+   42%{
+    background-color: #850f3c;
+   }
+   20%,
+   40%{
+    background-color: #d23873;
+   }
+   100%{
+    background-color: rgb(227, 27, 27);
+   }
+}
+.amount{
+   width: 25%;
+   background-color: #1a1a3a;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   padding: 1rem  ;
+}
+.amountnumber{
+  font-weight: 100;
+  margin-right: 4px;
+}
+.amounttext{
+  font-weight: bold;
+  font-size: 20px;
+}
+.moneylist{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.listitem{
+  list-style: none;
+  color: white;
+  padding: .4rem 1rem;
+  background-color: #c61559;
+  margin: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.listitem.active{
+  background-color:#850f3c ;
+}
+.listitem:hover
+{
+  background-color: #850f3c;
+}
+
+.result{
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
